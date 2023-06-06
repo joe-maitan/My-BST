@@ -1,7 +1,7 @@
 # My-BST
 My Binary Search Tree. This originally was an assignment for CS250. I got a grade of 4.7/5.
 
-This was a very important assignment to me however because it really expanded my knowledge of dynamic data structures and allowed me to create my own.
+This was a very important assignment to me however because it really expanded my knowledge of dynamic data structures and allowed me to create my own BST.
 
 I was responsible for creating the following methods (Every method was worth a point):
 - insert()

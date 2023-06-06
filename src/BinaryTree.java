@@ -48,13 +48,17 @@ public class BinaryTree implements TreeStructure {
         }
 
         while (current != null) {
-            if (newNode.data < current.data && current.left == null) {
+            if (newNode.data == current.data) { // Handling duplicates
+                return;
+            } 
+
+            if (newNode.data < current.data && current.left == null) { // new node is inserted on the left
                 current.left = newNode;
                 newNode.parent = current;
                 newNode.timeStamp = System.nanoTime();
                 size++;
                 return;
-            } else if (newNode.data > current.data && current.right == null) {
+            } else if (newNode.data > current.data && current.right == null) { // new node is inserted on the right
                 current.right = newNode;
                 newNode.parent = current;
                 newNode.timeStamp = System.nanoTime();
