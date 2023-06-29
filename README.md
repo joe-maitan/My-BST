@@ -12,7 +12,6 @@ I was responsible for creating the following methods (Every method was worth a p
 
 I have added some helper methods and others I thought that would be really useful.
 
-**This is where I got points taken off. I had missed two cases but I believe I have covered those now. 
+**This is where I got points taken off. I had missed two cases but they are fixed now. 
 - Case where successor is immediate right child of the node we want to remove
 - Case where the node we want to remove has one child
-If not feel free to debug, I would really appreciate the help.
