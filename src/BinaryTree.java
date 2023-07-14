@@ -329,21 +329,37 @@ public class BinaryTree implements TreeStructure {
     public void inorder(TreeNode root) {
         TreeNode current = root;
         
-        if (root == null) {
+        if (current == null) {
             return;
         }
 
         inorder(current.left);
-        System.out.println(current.data + " ");
+        System.out.print(current.data + " ");
         inorder(current.right);
     } // End inorder
 
     public void post_order(TreeNode root) {
+        TreeNode current = root;
         
+        if (current == null) {
+            return;
+        }
+
+        post_order(current.left);
+        post_order(current.right);
+        System.out.print(current.data + " ");
     } // End post_order
 
     public void pre_order(TreeNode root) {
+        TreeNode current = root;
         
+        if (current == null) {
+            return;
+        }
+        
+        System.out.print(current.data + " ");
+        pre_order(current.left);
+        pre_order(current.right);
     } // End pre_order
 
     public TreeNode getRoot() {

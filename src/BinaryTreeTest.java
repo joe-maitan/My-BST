@@ -1,11 +1,6 @@
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.stream.StreamSupport;
-
 public class BinaryTreeTest {
     public static void main(String[] args) {
         TreeStructure BST = new BinaryTree();
-        TreeNode root = root;
       
         System.out.println("------Testing BST------");
         BST.insert(50);
@@ -21,10 +16,17 @@ public class BinaryTreeTest {
         System.out.println("Initial Max depth: " + BST.findMaxDepth());
         System.out.println("Initial Min depth: " +BST.findMinDepth());
         System.out.println("Initial size: " + BST.size());
-        System.out.println(BST.getRoot());
         System.out.println("-----------------------");
 
-        System.out.println("Inorder traversal: " + BST.inorder(BST.getRoot()));
+        System.out.println("Inorder Traversal:");
+        BST.inorder(BST.getRoot());
+        System.out.println();
+        System.out.println("Preorder Traversal:");
+        BST.pre_order(BST.getRoot());
+        System.out.println();
+        System.out.println("Postorder Traversal:");
+        BST.post_order(BST.getRoot());
+        System.out.println();
 
 
         System.out.println("-----------------------");
