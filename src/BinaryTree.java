@@ -324,6 +324,35 @@ public class BinaryTree implements TreeStructure {
 
     public Integer size() {
         return this.size;
-    }
+    } // End size
+
+    public void inorder(TreeNode root) {
+        TreeNode current = root;
+        
+        if (root == null) {
+            return;
+        }
+
+        inorder(current.left);
+        System.out.println(current.data + " ");
+        inorder(current.right);
+    } // End inorder
+
+    public void post_order(TreeNode root) {
+        
+    } // End post_order
+
+    public void pre_order(TreeNode root) {
+        
+    } // End pre_order
+
+    public TreeNode getRoot() {
+        if (this.root == null) {
+            throw new UnknownError("Root is null");
+        } else {
+            return this.root;
+        }
+    } // End getRoot
+
   
 } // End BinaryTree class
