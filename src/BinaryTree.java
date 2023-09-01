@@ -76,7 +76,7 @@ public class BinaryTree implements TreeStructure {
         TreeNode current = root;
         TreeNode removeNode = search(current, target);
 
-        // Node was not found or root is null. 
+        // Node we are trying to remove was not found 
         if (removeNode == null) {
             return false;
         } 
@@ -160,8 +160,6 @@ public class BinaryTree implements TreeStructure {
                     return true;
                 }
             }
-            
-          //  return false;
         } // End if-else remove a node with one child
 
         // Case #3 - remove a node with two children
@@ -191,9 +189,9 @@ public class BinaryTree implements TreeStructure {
                     size--;
                     return true;
                 }
-            } // End case
+            } // End if the remove node with two children is the root
 
-             // Case if the successor is the immediate right child of the node we want to remove
+            // Case if the successor is the immediate right child of the node we want to remove
             if (removeNode.right == successor) {
                 if (removeNode.data < removeNode.parent.data) { // Removing a node on the left
                     removeNode.parent.left = successor;
@@ -214,7 +212,7 @@ public class BinaryTree implements TreeStructure {
                     size--;
                     return true;
                 }
-            } // End Case 
+            } // End case if the successor is the immediate right child 
 
             if (successor.right != null) { // Successor has a right child
                 if (removeNode.data < removeNode.parent.data) { // go left
@@ -242,7 +240,7 @@ public class BinaryTree implements TreeStructure {
                     size--;
                     return true;
                 }
-            }
+            } // End the replacement case for the successor nodes
 
             if (removeNode.data < removeNode.parent.data) { // removing a node on the left
                     successor.parent.left = null;
@@ -267,7 +265,7 @@ public class BinaryTree implements TreeStructure {
                     size--;
                     return true;
                 }    
-        }// End case for two childrewn
+        } // End case for two childrewn
 
        return false; 
     } // End remove()

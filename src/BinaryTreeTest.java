@@ -28,6 +28,10 @@ public class BinaryTreeTest {
         BST.post_order(BST.getRoot());
         System.out.println();
 
+        BST.remove(50);
+        BST.remove(20);
+        BST.remove(10);
+
 
         System.out.println("-----------------------");
         System.out.println("New max depth: " + BST.findMaxDepth());
