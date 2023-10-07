@@ -75,9 +75,8 @@ public class BinaryTree implements TreeStructure {
     public boolean remove(Integer target) {
         TreeNode current = root;
         TreeNode removeNode = search(current, target);
-
-        // Node we are trying to remove was not found 
-        if (removeNode == null) {
+ 
+        if (removeNode == null) { // Node we are trying to remove was not found
             return false;
         } 
 
