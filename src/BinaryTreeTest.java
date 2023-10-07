@@ -1,6 +1,17 @@
+import java.io.*;
+import java.net.*;
+
 public class BinaryTreeTest {
     public static void main(String[] args) {
+        try {
+            URL database = new URL("homedepot.com");
+        } catch (MalformedURLException e) {
+            e.getMessage();
+            e.printStackTrace();
+        }
+
         TreeStructure BST = new BinaryTree();
+        Calculator my_calc = new Calculator();
       
         System.out.println("------Testing BST------");
         BST.insert(50);
@@ -38,6 +49,8 @@ public class BinaryTreeTest {
         System.out.println("New min depth: " +BST.findMinDepth());
         System.out.println("new size: " + BST.size());
         System.out.println("-----------------------");
+
+
 
     } // End main
     
