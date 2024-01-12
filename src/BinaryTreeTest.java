@@ -1,6 +1,3 @@
-import java.io.*;
-import java.net.*;
-
 public class BinaryTreeTest {
     public static void main(String[] args) {
         TreeStructure BST = new BinaryTree();
@@ -33,9 +30,9 @@ public class BinaryTreeTest {
 
         System.out.println("-----------------------");
         System.out.println("Testing Remove");
-        BST.remove(50); // Remove root
-        BST.remove(20); // Remove left child
-        BST.remove(10);
+        BST.remove(50);
+        BST.remove(20); 
+        BST.remove(10); 
 
         System.out.println("Inorder Traversal:");
         BST.inorder(BST.getRoot());
