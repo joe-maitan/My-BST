@@ -3,16 +3,8 @@ import java.net.*;
 
 public class BinaryTreeTest {
     public static void main(String[] args) {
-        try {
-            URL database = new URL("homedepot.com");
-        } catch (MalformedURLException e) {
-            e.getMessage();
-            e.printStackTrace();
-        }
-
         TreeStructure BST = new BinaryTree();
-        Calculator my_calc = new Calculator();
-      
+    
         System.out.println("------Testing BST------");
         BST.insert(50);
         BST.insert(20);
@@ -39,9 +31,21 @@ public class BinaryTreeTest {
         BST.post_order(BST.getRoot());
         System.out.println();
 
-        BST.remove(50);
-        BST.remove(20);
+        System.out.println("-----------------------");
+        System.out.println("Testing Remove");
+        BST.remove(50); // Remove root
+        BST.remove(20); // Remove left child
         BST.remove(10);
+
+        System.out.println("Inorder Traversal:");
+        BST.inorder(BST.getRoot());
+        System.out.println();
+        System.out.println("Preorder Traversal:");
+        BST.pre_order(BST.getRoot());
+        System.out.println();
+        System.out.println("Postorder Traversal:");
+        BST.post_order(BST.getRoot());
+        System.out.println();
 
 
         System.out.println("-----------------------");
